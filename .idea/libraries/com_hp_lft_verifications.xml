@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="com.hp.lft.verifications">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/com.hp.lft.verifications.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
