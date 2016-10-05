@@ -67,8 +67,8 @@ public class AOBMobileTransferStepDefinitions {
         aobAndroidModel.AdvantageApplication().PasswordEditField().setText("password");
         aobAndroidModel.AdvantageApplication().LoginButton().tap();
 
-        int savingsBalanceBefore = Integer.parseInt(aobAndroidModel.AdvantageApplication().SavingsBalanceLabel().getText());
-        int checkingBalanceBefore = Integer.parseInt(aobAndroidModel.AdvantageApplication().CheckingBalanceLabel().getText());
+        savingsBalanceBefore = Integer.parseInt(aobAndroidModel.AdvantageApplication().SavingsBalanceLabel().getText());
+        checkingBalanceBefore = Integer.parseInt(aobAndroidModel.AdvantageApplication().CheckingBalanceLabel().getText());
 
     }
 
@@ -85,15 +85,15 @@ public class AOBMobileTransferStepDefinitions {
 
         aobAndroidModel.AdvantageApplication().OKButton().tap();
 
-        int savingsBalanceAfter = Integer.parseInt(aobAndroidModel.AdvantageApplication().SavingsBalanceLabel().getText());
-        int checkingBalanceAfter = Integer.parseInt(aobAndroidModel.AdvantageApplication().CheckingBalanceLabel().getText());
+        savingsBalanceAfter = Integer.parseInt(aobAndroidModel.AdvantageApplication().SavingsBalanceLabel().getText());
+        checkingBalanceAfter = Integer.parseInt(aobAndroidModel.AdvantageApplication().CheckingBalanceLabel().getText());
     }
 
     @Then("^The amount in from account is reduced by (\\d+) dollars$")
     public void the_amount_in_from_account_is_reduced_by_dollars(int arg1) throws Throwable {
         Verify.areEqual((savingsBalanceBefore - savingsBalanceAfter), 100, "Savings Balance reduced by Transfer Amount");
         Verify.areEqual((checkingBalanceAfter - checkingBalanceBefore), 100, "Checking Balance increased by Transfer Amount");
-        Reporter.reportEvent("Balance Check","Final balance after transter",Status.valueOf("Info"),myDevice.getSnapshot());
+        Reporter.reportEvent("Balance Check","Final balance after transter",Status.Warning, myDevice.getSnapshot());
     }
 
 
