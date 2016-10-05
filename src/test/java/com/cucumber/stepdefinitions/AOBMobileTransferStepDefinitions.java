@@ -93,7 +93,7 @@ public class AOBMobileTransferStepDefinitions {
     public void the_amount_in_from_account_is_reduced_by_dollars(int arg1) throws Throwable {
         Verify.areEqual((savingsBalanceBefore - savingsBalanceAfter), 100, "Savings Balance reduced by Transfer Amount");
         Verify.areEqual((checkingBalanceAfter - checkingBalanceBefore), 100, "Checking Balance increased by Transfer Amount");
-        Reporter.reportEvent("Balance Check","Final balance aferer transter",Status.Warning, myDevice.getSnapshot());
+        Reporter.reportEvent("Balance Check","Final balance after test is run",Status.Warning, myDevice.getSnapshot());
     }
 
 
