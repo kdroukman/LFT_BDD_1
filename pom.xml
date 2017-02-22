@@ -61,7 +61,7 @@
         <dependency>
             <groupId>com.hp.lft</groupId>
             <artifactId>com.hp.lft.sdk</artifactId>
-            <version>12.53.0</version>
+            <version>14.00.0</version>
             <scope>system</scope>
             <systemPath>${project.basedir}/lib/com.hp.lft.sdk-standalone.jar</systemPath>
         </dependency>
@@ -69,7 +69,7 @@
         <dependency>
             <groupId>com.hp.lft</groupId>
             <artifactId>com.hp.lft.sdk</artifactId>
-            <version>12.53.0</version>
+            <version>14.00.0</version>
             <classifier>javadoc</classifier>
             <scope>system</scope>
             <systemPath>${project.basedir}/lib/com.hp.lft.sdk-javadoc.jar</systemPath>
@@ -78,7 +78,7 @@
         <dependency>
             <groupId>com.hp.lft</groupId>
             <artifactId>com.hp.lft.report</artifactId>
-            <version>12.53.0</version>
+            <version>14.00.0</version>
             <scope>system</scope>
             <systemPath>${project.basedir}/lib/com.hp.lft.report.jar</systemPath>
         </dependency>
@@ -86,7 +86,7 @@
         <dependency>
             <groupId>com.hp.lft</groupId>
             <artifactId>com.hp.lft.unittesting</artifactId>
-            <version>12.53.0</version>
+            <version>14.00.0</version>
             <scope>system</scope>
             <systemPath>${project.basedir}/lib/com.hp.lft.unittesting.jar</systemPath>
         </dependency>
@@ -94,7 +94,7 @@
         <dependency>
             <groupId>com.hp.lft</groupId>
             <artifactId>com.hp.lft.verifications</artifactId>
-            <version>12.53.0</version>
+            <version>14.00.0</version>
             <scope>system</scope>
             <systemPath>${project.basedir}/lib/com.hp.lft.verifications.jar</systemPath>
         </dependency>

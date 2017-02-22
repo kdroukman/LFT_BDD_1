@@ -2,7 +2,7 @@
   <library name="com.hp.lft.sdk-javadoc">
     <CLASSES />
     <JAVADOC>
-      <root url="jar://$PROJECT_DIR$/lib/com.hp.lft.sdk-javadoc.jar!/" />
+      <root url="jar://C:/Program Files (x86)/HP/Unified Functional Testing/SDK/Java/com.hp.lft.sdk-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES />
   </library>

@@ -8,15 +8,11 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/appmodels" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$" type="java-resource" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="com.hp.lft.report" level="project" />
-    <orderEntry type="library" name="com.hp.lft.sdk-javadoc" level="project" />
-    <orderEntry type="library" name="com.hp.lft.sdk-standalone" level="project" />
-    <orderEntry type="library" name="com.hp.lft.unittesting" level="project" />
-    <orderEntry type="library" name="com.hp.lft.verifications" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: info.cukes:cucumber-core:1.2.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: info.cukes:cucumber-java:1.2.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: info.cukes:cucumber-html:0.2.3" level="project" />
@@ -73,5 +69,12 @@
     <orderEntry type="library" name="Maven: com.hpe.alm.octane:octane-cucumber-jvm:12.53.19" level="project" />
     <orderEntry type="library" name="Maven: org.easymock:easymock:3.4" level="project" />
     <orderEntry type="library" name="Maven: org.objenesis:objenesis:2.2" level="project" />
+    <orderEntry type="library" name="com.hp.lft.common" level="project" />
+    <orderEntry type="library" name="com.hp.lft.report" level="project" />
+    <orderEntry type="library" name="com.hp.lft.reportbuilder-standalone" level="project" />
+    <orderEntry type="library" name="com.hp.lft.sdk-javadoc" level="project" />
+    <orderEntry type="library" name="com.hp.lft.sdk-standalone" level="project" />
+    <orderEntry type="library" name="com.hp.lft.unittesting" level="project" />
+    <orderEntry type="library" name="com.hp.lft.verifications" level="project" />
   </component>
 </module>

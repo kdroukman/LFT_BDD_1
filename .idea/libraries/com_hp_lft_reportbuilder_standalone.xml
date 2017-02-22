@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="com.hp.lft.reportbuilder-standalone">
+    <CLASSES>
+      <root url="jar://C:/Program Files (x86)/HP/Unified Functional Testing/SDK/Java/com.hp.lft.reportbuilder-standalone.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
