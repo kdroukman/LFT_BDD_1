@@ -1,7 +1,5 @@
 package com.cucumber.stepdefinitions;
 
-import com.hp.lft.unittesting.UnitTestBase;
-import com.hp.lft.verifications.Verify;
 import cucumber.api.PendingException;
 import cucumber.api.java.Before;
 import cucumber.api.java.After;
@@ -16,14 +14,14 @@ import com.hp.lft.report.*;
 import java.io.IOException;
 import java.net.URI;
 
-import com.cucumber.leanft.AOBAndroid;
+import com.cucumber.leanft.AdvantageApps;
 
 /**
  * Created by droukman on 10/5/2016.
  */
 public class AOBMobileTransferStepDefinitions {
 
-    private AOBAndroid aobAndroidModel;
+    private AdvantageApps aobAndroidModel;
     private Device myDevice;
     private int savingsBalanceBefore;
     private int checkingBalanceBefore;
@@ -37,13 +35,13 @@ public class AOBMobileTransferStepDefinitions {
             ModifiableSDKConfiguration config = new ModifiableSDKConfiguration();
             config.setServerAddress(new URI("ws://localhost:5095"));
             SDK.init(config);
-            Reporter.init();
+           // Reporter.init();
         }
         catch (Exception e) {
             }
 
      /*   myDevice = MobileLab.lockDeviceById("656e674a");
-        aobAndroidModel = new AOBAndroid(myDevice);
+        aobAndroidModel = new AdvantageApps(myDevice);
         aobAndroidModel.AdvantageApplication().restart();
         Reporter.startTest(scenario.getName());*/
 
@@ -54,9 +52,9 @@ public class AOBMobileTransferStepDefinitions {
     @After
     public void afterScenario() throws InterruptedException, ReportException, GeneralLeanFtException {
 
-        Reporter.endTest();
+       // Reporter.endTest();
 
-        Reporter.generateReport();
+       // Reporter.generateReport();
        // myDevice.unlock();
         SDK.cleanup();
     }
