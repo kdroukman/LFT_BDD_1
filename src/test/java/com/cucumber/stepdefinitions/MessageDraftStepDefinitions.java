@@ -50,7 +50,7 @@ public class MessageDraftStepDefinitions {
     @After
     public void afterScenario() throws InterruptedException, ReportException, GeneralLeanFtException {
 
-        Reporter.endTest();
+//        Reporter.endTest();
 
         Reporter.generateReport();
         browser.closeAllTabs();
