@@ -17,6 +17,7 @@ import cucumber.api.junit.Cucumber;
         plugin = {
                 "pretty",
                 "html:target/cucumber",
+                "junit:OctaneGherkinResults.xml",
         }
 
 )

@@ -1,6 +1,5 @@
 package com.cucumber.stepdefinitions;
 
-import com.hp.lft.unittesting.UnitTestBase;
 import com.hp.lft.verifications.Verify;
 import cucumber.api.PendingException;
 import cucumber.api.java.Before;
@@ -14,7 +13,9 @@ import com.hp.lft.sdk.web.*;
 import com.hp.lft.report.*;
 
 import java.net.URI;
-import com.cucumber.leanft.AODWeb;
+import com.cucumber.leanft.AOBWeb;
+import junit.framework.Assert;
+
 import java.io.IOException;
 
 /**
@@ -22,7 +23,7 @@ import java.io.IOException;
  */
 public class MessageDraftStepDefinitions {
 
-    AODWeb website;
+    AOBWeb website;
     Browser browser;
 
 
@@ -39,7 +40,7 @@ public class MessageDraftStepDefinitions {
         }
 
         browser = BrowserFactory.launch(BrowserType.CHROME);
-        website = new AODWeb(browser);
+        website = new AOBWeb(browser);
         Reporter.startTest(scenario.getName());
 
 
@@ -60,19 +61,23 @@ public class MessageDraftStepDefinitions {
     public void i_am_on_the_contact_us_page() throws Throwable {
         browser.navigate("www.advantageonlineshopping.com");
         // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+       // throw new PendingException();
     }
 
     @When("^I enter (\\d+) characters$")
     public void i_enter_characters(int arg1) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        website.ContactUsSubject().setValue("Test Value");
+
+        website.AosPage().SelectProductCombo().select(1);
+        website.AosPage().SelectSubProduct().select(1);
+        website.AosPage().ContactUsSubject().setValue("Test Value Test Value Test Value");
         //hrow new PendingException();
     }
 
     @Then("^The full message is entered successfully$")
     public void the_full_message_is_entered_successfully() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        Assert.assertEquals(website.AosPage().ContactUsSubject().getValue(),"Test Value Test Value Test Value");
+       // throw new PendingException();
     }
 }

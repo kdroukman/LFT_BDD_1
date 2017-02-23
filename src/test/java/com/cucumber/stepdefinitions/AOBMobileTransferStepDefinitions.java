@@ -42,10 +42,10 @@ public class AOBMobileTransferStepDefinitions {
         catch (Exception e) {
             }
 
-        myDevice = MobileLab.lockDeviceById("656e674a");
+     /*   myDevice = MobileLab.lockDeviceById("656e674a");
         aobAndroidModel = new AOBAndroid(myDevice);
         aobAndroidModel.AdvantageApplication().restart();
-        Reporter.startTest(scenario.getName());
+        Reporter.startTest(scenario.getName());*/
 
 
     }
@@ -57,43 +57,51 @@ public class AOBMobileTransferStepDefinitions {
         Reporter.endTest();
 
         Reporter.generateReport();
-        myDevice.unlock();
+       // myDevice.unlock();
         SDK.cleanup();
     }
 
     @Given("^I have logged into Mobile Banking$")
     public void i_have_logged_into_Mobile_Banking() throws Throwable {
-        aobAndroidModel.AdvantageApplication().UsernameEditField().setText("username");
+      /*  aobAndroidModel.AdvantageApplication().UsernameEditField().setText("username");
         aobAndroidModel.AdvantageApplication().PasswordEditField().setText("password");
         aobAndroidModel.AdvantageApplication().LoginButton().tap();
 
         savingsBalanceBefore = Integer.parseInt(aobAndroidModel.AdvantageApplication().SavingsBalanceLabel().getText());
-        checkingBalanceBefore = Integer.parseInt(aobAndroidModel.AdvantageApplication().CheckingBalanceLabel().getText());
+        checkingBalanceBefore = Integer.parseInt(aobAndroidModel.AdvantageApplication().CheckingBalanceLabel().getText());*/
+
+        throw new PendingException();
 
     }
 
     @Given("^I have selected to transfer funds$")
     public void i_have_selected_to_transfer_funds() throws Throwable {
-        aobAndroidModel.AdvantageApplication().MenuUiObject().tap();
-        aobAndroidModel.AdvantageApplication().MoneyTransferLabel().tap();
+      /*  aobAndroidModel.AdvantageApplication().MenuUiObject().tap();
+        aobAndroidModel.AdvantageApplication().MoneyTransferLabel().tap();*/
+        throw new PendingException();
     }
 
     @When("^I transfer (\\d+) dollars$")
     public void i_transfer_dollars(int arg1) throws Throwable {
+        /*
         aobAndroidModel.AdvantageApplication().TransferSumEditField().setText("100");
         aobAndroidModel.AdvantageApplication().TRANSFERButton().tap();
 
         aobAndroidModel.AdvantageApplication().OKButton().tap();
 
         savingsBalanceAfter = Integer.parseInt(aobAndroidModel.AdvantageApplication().SavingsBalanceLabel().getText());
-        checkingBalanceAfter = Integer.parseInt(aobAndroidModel.AdvantageApplication().CheckingBalanceLabel().getText());
+        checkingBalanceAfter = Integer.parseInt(aobAndroidModel.AdvantageApplication().CheckingBalanceLabel().getText());*/
+        throw new PendingException();
     }
 
     @Then("^The amount in from account is reduced by (\\d+) dollars$")
     public void the_amount_in_from_account_is_reduced_by_dollars(int arg1) throws Throwable {
+        /*
         Verify.areEqual((savingsBalanceBefore - savingsBalanceAfter), 100, "Savings Balance reduced by Transfer Amount");
         Verify.areEqual((checkingBalanceAfter - checkingBalanceBefore), 100, "Checking Balance increased by Transfer Amount");
         Reporter.reportEvent("Balance Check","Final balance after test is run",Status.Warning, myDevice.getSnapshot());
+        */
+        throw new PendingException();
     }
 
 
